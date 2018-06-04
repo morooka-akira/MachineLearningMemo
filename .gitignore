@@ -1,2 +1,5 @@
 ml-at-work/result/
 .ipynb_checkpoints/
+data/
+logs/
+ckpt/
