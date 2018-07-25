@@ -3,3 +3,4 @@ ml-at-work/result/
 data/
 logs/
 ckpt/
+node_modules/
