@@ -1,0 +1,15 @@
+version: "2"
+services:
+  jupyterlab:
+    build:
+      context: .
+    user: root
+    ports:
+      - "80:8888"
+    volumes:
+      - "./work:/work" # notebookをホストと共有したいためディレクトリをマウント
+    environment:
+      NB_UID: 500 # 作業するユーザーのUID(jovyanというユーザが作られるっぽい)
+      GRANT_SUDO: "yes"
+    # pass:12345
+    command: start.sh jupyter lab --NotebookApp.password="sha1:9267af928065:6e2b25fec41976f273d2e270e7581c3401afe59d"
